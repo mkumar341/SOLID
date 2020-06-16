@@ -5,7 +5,7 @@ Each module has one and only one reason to change. If any class has more than on
 
 ### Code
 
-```
+```cs
 public class Employee 
     {
         public int ID { get; set; }
@@ -30,7 +30,7 @@ We can see in code that `Employee` class is dealing with two responsibilities, o
 
 ### SRP Compliant
 
-```
+```cs
 public class Employee 
     {
         public int ID { get; set; }
@@ -61,7 +61,7 @@ Software entities(classes, modules, functions) are open for the extension which 
 
 ### Code
 
-```
+```cs
    public class Package
     {
         public void AssignPackagePlan(Customer customer)
@@ -83,7 +83,7 @@ We can see in the above code that if we introduce a new package for example `Pla
 
 ### OCP Compliant
 
-```
+```cs
 public interface  IPackagePlan
     {
         void Plan();
@@ -112,7 +112,7 @@ The collection of guidelines to create inheritance hierarchies which make sure t
 
 ### Code
 
-```
+```cs
 public class Employee 
     {
         public int ID { get; set; }
@@ -147,7 +147,7 @@ The above simple example is easy to understand, `Salary` does not belong to `Cus
 
 ### LSP Compliant
 
-```
+```cs
     public class Person
     {
         public int ID { get; set; }
@@ -176,7 +176,7 @@ ISP states that the interfaces should be smaller so classes cannot be forced to 
 
 ### Code
 
-```
+```cs
 public interface IBase
     {
         void Add(Employee employee);
@@ -214,7 +214,7 @@ The problem in the above code is, we are forced to implement `Plan` method.
 
 ### ISP Compliant
 
-```
+```cs
 public interface  IPackagePlan
     {
         void Plan();
@@ -245,7 +245,7 @@ We have split `IBase` interface into two interfaces. Thus, classes are not imple
 DIP focus on writing loosely coupled code because it is easy to maintain when the application grows bigger. This can be achieved by depending on abstraction rather than implementation.
 ### Code
 
-```
+```cs
     public class Person
     {
         public int ID { get; set; }
@@ -292,7 +292,7 @@ We can see in the above code that `EmployeeService` class depends on `EmployeeRe
 
 ### DIP Compliant
 
-```
+```cs
     public class Person
     {
         public int ID { get; set; }
